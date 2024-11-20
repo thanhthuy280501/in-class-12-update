@@ -48,6 +48,8 @@ class LList {
     bool remove(T& it);
     void print() const;
     bool search(const T& keyval) const;
+    bool sortedInsert(const T& item);
+
 
 };
 
