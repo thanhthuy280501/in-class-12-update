@@ -47,6 +47,8 @@ class LList {
     bool append(const T& item);
     bool remove(T& it);
     void print() const;
+    bool search(const T& keyval) const;
+
 };
 
 #include "llist.cpp"
