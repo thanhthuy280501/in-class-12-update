@@ -70,4 +70,14 @@ void LList<T>::print() const {
         temp = temp->next;
     }
     cout << ">\n";
+template <typename T>
+bool LList<T>::search(const T& keyval) const {
+    Link<T>* current = head->next;
+    while (current != nullptr) {
+        if (current->element == keyval) return true;
+        current = current->next;
+    }
+    return false;
+}
+
 }
