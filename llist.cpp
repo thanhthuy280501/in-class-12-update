@@ -79,5 +79,17 @@ bool LList<T>::search(const T& keyval) const {
     }
     return false;
 }
+template <typename T>
+bool LList<T>::sortedInsert(const T& item) {
+    Link<T>* current = head;
+    while (current->next != nullptr && current->next->element < item) {
+        current = current->next;
+    }
+    current->next = new Link<T>(item, current->next);
+    if (current == tail) tail = current->next;
+    rightcnt++;
+    return true;
+}
+
 
 }
